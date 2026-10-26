@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "jndruxx-memtrace"
+version = "0.1.0"
+description = "记录记忆的写入、命中与覆盖过程，说明每条记忆为何被保留。"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "jndruxx" }]
+keywords = ["memory", "agents", "tracing", "llm"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://jndruxx.github.io"
+Repository = "https://github.com/jndruxx/memtrace"
+Issues = "https://github.com/jndruxx/memtrace/issues"
+
+[project.scripts]
+memtrace = "memtrace:main"
+
+[tool.setuptools]
+py-modules = ["memtrace"]
